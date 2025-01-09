@@ -1,0 +1,452 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    background-color: #2C2D2D;
+}
+
+.menu{
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: var(--color-boton);
+    color: white;
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
+/*----------------Barra Lateral*/
+.barra-lateral{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    background-color: rgb(23, 24, 24);
+    transition: width 0.5s ease,background-color 0.3s ease,left 0.5s ease;
+    z-index: 50;
+}
+
+.mini-barra-lateral{
+    width: 80px;
+}
+.barra-lateral span{
+    width: 158px;
+    white-space: nowrap;
+    font-size: 18px;
+    text-align: left;
+    opacity: 1;
+    transition: opacity 0.5s ease,width 0.5s ease;
+    color: white;
+}
+.barra-lateral span.oculto{
+    opacity: 0;
+    width: 0;
+}
+
+/*------------> Nombre de la página */
+.barra-lateral .nombre-pagina{
+    width: 100%;
+    height: 45px;
+    color: white;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+}
+.barra-lateral .nombre-pagina ion-icon{
+    min-width: 50px;
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+.barra-lateral .nombre-pagina span{
+    margin-left: 7%;
+    font-size: 18px;
+}
+
+
+/*--------------> Menu Navegación*/
+.barra-lateral .navegacion{
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.barra-lateral .navegacion li{  
+    list-style: none;
+    display: flex;
+    margin-bottom: 5px;
+}
+.barra-lateral .navegacion a{
+    width: 94%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border-radius: 10px;
+    color: white;
+    padding: 30px 0px 30px 0px;
+}
+.barra-lateral .navegacion a:hover{
+    background-color: #2C2D2D;
+    color: white;
+}
+.barra-lateral .navegacion ion-icon{
+    min-width: 50px;
+    font-size: 20px;
+}
+
+/*-----------------> Linea*/
+
+
+/*----------------> Modo Oscuro*/
+.barra-lateral .modo-oscuro{
+    width: 100%;
+    margin-bottom: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.barra-lateral .modo-oscuro .info{
+    width: 150px;
+    height: 45px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    color: var(--color-texto-menu);
+}
+.barra-lateral .modo-oscuro ion-icon{
+
+    width: 50px;
+    font-size: 20px;
+}
+
+/*--->switch*/
+.barra-lateral .modo-oscuro .switch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+    cursor: pointer;
+}
+.barra-lateral .modo-oscuro .base{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    background-color: var(--color-switch-base);
+    border-radius: 50px;
+}
+.barra-lateral .modo-oscuro .circulo{
+    position: absolute;
+    width: 18px;
+    height: 90%;
+    background-color: var(--color-switch-circulo);
+    border-radius: 50%;
+    left: 2px;
+    transition: left 0.5s ease;
+}
+.barra-lateral .modo-oscuro .circulo.prendido{
+    left: 15px;
+}
+
+/*---------------> Usuario*/
+.barra-lateral .usuario{
+    width: 100%;
+    display: flex;
+}
+.barra-lateral .usuario img{
+    width: 50px;
+    min-width: 50px;
+    border-radius: 10px;
+}
+
+main{
+    margin-left: 50px;
+    padding: 0px;
+    transition: margin-left 0.5s ease;
+}
+main.min-main{
+    margin-left: 80px;
+}
+
+
+
+/*------------------> Responsive*/
+@media (max-height: 660px){
+    .barra-lateral .nombre-pagina{
+        margin-bottom: 5px;
+    }
+    .barra-lateral .modo-oscuro{
+        margin-bottom: 3px;
+    }
+}
+@media (max-width: 600px){
+    .barra-lateral{
+        position: fixed;
+        left: -250px;
+    }
+    .max-barra-lateral{
+        left: 0;
+    }
+    .menu{
+        display: flex;
+    }
+    .menu ion-icon:nth-child(2){
+        display: none;
+    }
+    main{
+        margin-left: 0;
+    }
+    main.min-main{
+        margin-left: 0;
+    }
+    
+}
+
+/* --------------------------------------------------------- */
+
+.content {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--color-contet);
+    display: flex;
+    justify-content: flex-end;
+
+  }
+  
+.center-box {
+    border: 1px solid;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(23, 24, 24);
+    height: 85%;
+    width: 77%;
+    display: flex;
+    padding: 20px;
+    flex-direction: row-reverse;
+    margin-right: 30px;
+    justify-content: space-around;
+    font-size: 24px;
+    border-color: rgb(23, 24, 24);
+    background-color: rgb(23, 24, 24);
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.7);
+}
+    
+.center-octa{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--color-center-box);
+    height: 80%;
+    width: 77%;
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    flex-direction: row-reverse;
+    margin-right: 40px;
+    justify-content: space-around;
+    font-size: 24px;
+    border-color: var(--color-box-border);
+    color: var(--color-box-text);
+}
+  
+  .center-box img {
+
+   max-height: 70%;
+    max-width: 95%;
+   height: auto;
+  }
+  .timer-icon{
+    width: 10%; 
+    height: 67%; 
+    display: flex; 
+  }
+
+
+  .center-box .imagen1 .imagen2 .imagen3 .imagen4 .imagen5{
+    width: 120%;
+    height: 100%;
+  }
+  
+  .center-box button {
+    background-color: black;
+    color: white;
+    border: 1px solid rgb(4, 145, 138);
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+    border-radius: 15px;
+  }
+
+.center-box button:hover{
+background-color: #2C2D2D;
+
+}
+
+  
+  .imagen-principal{
+    max-width: 50%;
+    height: auto;
+    margin-bottom: 20px;
+
+  }
+
+  .contenido_inicial{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+    width: 80%;
+    margin-right: 90%;
+  }
+
+p{
+    font-style: 10px;
+    padding: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* ------------------------------------------ */
+
+
+:root a.selected {
+    background: #d8d6d6;
+    color: #000000;
+}
+.dark-mode a.selected {
+    background: #000000;
+    color: white;
+  }
+
+.algo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+}
+#iguana{
+    width: 12%;
+    height: 12%;
+}
+.materias{
+    padding: 5px;
+    border: #000000 12px;
+    display: flex;
+    width: 115%;
+    height: 100%; 
+
+}
+
+#opciones {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    background-color: var(--color-opciones);
+    width: 25%;
+    height: 45%;
+    border-radius: 12px;
+    align-items: center;
+    padding: 0px;
+}
+
+#opciones:hover{
+    background-color: var(--color-opccion);
+}
+
+.escoge{ 
+    border-color: rgb(23, 24, 24);
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.entrada{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    height: 100%;
+    width: 55%;
+}
+#imagen{
+    height: 80%;
+    width: 50%;
+}
+
+.bienvenida p {
+    font-size: 25px;
+    margin: 3%;
+    margin-bottom: 2%;
+}
+.bienvenida{
+    width: 100%;
+}
+.center-box p{
+    align-items: center;
+    border-radius: 4px;
+    font-family: "Wellfleet";
+    color: #fff;
+}
+
+.caja{
+    text-align: center;
+    background-color: gainsboro;
+    height: 105%;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    font-size: 24px;
+}
+
+.texto{
+    align-items: center;
+    display: flex;
+}
+.nav{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.ajustar {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.icon-inner, .ionicon, svg {
+    color: white;}
+

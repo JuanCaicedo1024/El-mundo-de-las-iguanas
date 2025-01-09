@@ -1,0 +1,59 @@
+.parte_de_portillo {
+    display: flex;
+    align-items: center; /* Centra verticalmente el contenido */
+    justify-content: space-between;
+    text-align: left;
+    padding: 50px;
+    border-radius: 10px;
+    padding-top: 120px;
+    
+    /* Asegura que el contenedor esté centrado */
+    width: 100%; 
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+}
+
+.text-content {
+    color: white;
+    margin-left: 60px;
+}
+
+.El_mundo {
+    margin: 0;
+    font-size: 90px;
+    color: white;
+}
+
+.MUNDO {
+    color: #59EA00;
+    display: inline;
+}
+
+.IGUANAS {
+    display: block;
+    color: #FFF733;
+}
+
+.Instituto {
+    margin-top: 10px;
+    font-size: 25px;
+    font-family: "Rubik";
+}
+
+.learn-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(43, 41, 41);
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.Imagen {
+    width: 500px;
+    height: auto;
+    margin-left: auto;
+    margin-right: 90px;
+    margin-top: 20px;
+}

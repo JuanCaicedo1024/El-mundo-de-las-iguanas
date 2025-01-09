@@ -1,0 +1,114 @@
+.part1 {
+    width: 100%;
+    max-width: 1200px;
+    height: auto; /* Cambia el valor fijo a auto para que se ajuste según el contenido */
+    background-color: #2C2D2D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px auto;
+    border-radius: 10px;
+    padding: 20px; /* Añade padding para evitar que el contenido toque los bordes */
+}
+
+.part1 img {
+    width: 100%;
+    max-width: 548px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.part1 h2, .part1 p, .part1 button {
+    margin-left: 50px;
+}
+
+.part1 h2 {
+    color: #FFFBFB;
+    width: 100%;
+    max-width: 420px;
+    font-size: 29px;
+    font-weight: 700;
+    margin: 40px 0;
+}
+
+.part1 p {
+    color: #FFFBFB;
+    font-size: 18px;
+    margin: 10px 0 30px 0;
+    width: 100%;
+    max-width: 555px;
+    font-family: "Rubik";
+}
+
+.part1 a {
+    display: flex;
+    width: 100%;
+    max-width: 242px;
+    height: 58px;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    border-radius: 21px;
+    border: 1px solid #FFFBFB;
+    background: #322D2D;
+    color: #FFFBFB;
+    text-align: center;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    
+}
+
+.part1 a:hover {
+    background: #4A4A4A;
+    color: #FFFFFF;
+}
+
+/* Media Queries para hacer responsive */
+@media (max-width: 768px) {
+    .part1 {
+        flex-direction: column; /* Cambia la disposición a columna para pantallas más pequeñas */
+        text-align: center;
+        padding: 10px;
+    }
+
+    .part1 img {
+        margin: 0 auto 20px auto;
+        width: 90%; /* Reduce el tamaño de la imagen en pantallas pequeñas */
+    }
+
+    .part1 h2, .part1 p, .part1 button {
+        margin-left: 0; /* Centra los textos y el botón */
+        width: 100%;
+    }
+
+    .part1 h2 {
+        font-size: 24px;
+    }
+
+    .part1 p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .part1 button {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .part1 h2 {
+        font-size: 20px;
+    }
+
+    .part1 p {
+        font-size: 14px;
+    }
+
+    .part1 button {
+        font-size: 14px;
+        height: 50px;
+    }
+}

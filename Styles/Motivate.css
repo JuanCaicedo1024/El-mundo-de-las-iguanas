@@ -1,0 +1,41 @@
+.part2 {
+    width: 100%; /* Ajusta el ancho al 100% del contenedor */
+    max-width: 1200px; /* Coincide con el ancho del contenido del header */
+    height: 647px;
+    background-color: #2C2D2D;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    margin: 0 auto 63px auto; /* Centra horizontalmente con margen automático */
+    padding: 20px; /* Ajuste opcional para añadir espacio interno */
+    border-radius: 10px;
+}
+
+.part2 img {
+    width: 304px;
+    height: 332.968px;
+    mask-image: linear-gradient(black 80%, transparent);
+}
+
+.part2 h2 {
+    color: #FFFBFB;
+    width: 420px;
+    height: 35px;
+    margin: 2px 9px 1px 50px;
+    font-size: 29px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-align: left;
+}
+
+.part2 p {
+    color: #FFFBFB;
+    font-size: 25px;
+    font-style: normal;
+    text-align: left;
+    line-height: normal;
+    margin: 10px 9px 30px 50px;
+    width: 555.238px;
+    font-family: "Rubik";
+}
