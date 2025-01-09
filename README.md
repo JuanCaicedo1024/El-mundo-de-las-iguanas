@@ -7,7 +7,6 @@ Este proyecto se centra en la creación de una plataforma informativa sobre las 
 - **HTML5**: Para la estructura del contenido web.
 - **CSS3**: Para el diseño y la presentación visual.
 - **JavaScript**: Para la interactividad y funcionalidades dinámicas.
-- **Node.js**: Para el backend y la gestión del servidor.
-- **MongoDB**: Para la base de datos y almacenamiento de información.
+
 
 ¡Esperamos que disfrutes aprendiendo sobre el fascinante mundo de las iguanas!
